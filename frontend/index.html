@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+
+  <title>Politiska Antydningar</title>
+  <link href="./css/default.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Playfair+Display" rel="stylesheet">
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/parties.js"></script>
+  <script src="./js/main.js"></script>
+</head>
+<body>
+  <div id="body_inner">
+    <div id="intro">
+      <h1>Vilka fördomar hittar vi i riksdagstalen (genom kontexter)?</h1>
+      <button id="show_step1">Ta reda på!</button>
+    </div>
+    <div id="step1">
+      <h3>1. Välj ett parti:<br><span class='aside'>(klicka igen för att byta)</span></h3>
+      <div id="party_selector">
+        <div id="party_list"></div>
+      </div>
+    </div>
+    <div id="step2">
+      <div id = "text_input">
+        <h3>2. Skriv ett ord: </h3>
+        <input id="word" type = "text"><br>
+        <button id="submit">3. Sök!</button>
+      </div>
+    </div>
+
+    <div id="results_area">
+    </div>
+  </div>
+
+  <div id="overlay">
+    <div id="overlay_inner">
+      <button id="close">X</button>
+      <div class='header2'>Vad menas med 'kontext'?</div>
+      <p>Om vi har det här två meningarna:<br>
+
+      <ul>
+        <li>Jag älskar katter</li>
+        <li>Jag älskar hundar</li>
+      </ul>
+      orden <em>katter</em> och <em>hundar</em> dyker upp i samma kontext.</p>
+
+      <p>När man tittar på denna typ av kontext i stora mängder text (med en algoritm som <a href='https://en.wikipedia.org/wiki/Word2vec'>word2vec</a>), kan kontexten förutsäga semantiska kategorier. Det vill säga, algoritmen visar att <em>hundar</em>, <em>katter</em>, <em>hamstrar</em>, <em>gerbiler</em> etc. alla har liknade kontexter, och de hör också till en grupp av ord som beskriver ett 'litet husdjur'.</p>
+      
+      <h3>Vad betyder det för partipolitiska tal?</h3>
+
+      <p>Frågan är, vilka ord använder våra politiker som om de tillhör samma kategori? När de talar om <em>medborgare</em>, talar de på samma sätt som de talar om <em>medmänniskor</em>, eller <em>konsumenter</em>?</p>
+
+      <p>Är <em>väljare</em> mer lika <em>vänner</em> eller <em>fiender</em>?  Klicka runt för att få veta!</p>
+      <hr>
+      <p><em>Obs: Detta är <strong>inte</strong> en vetenskaplig analys! Detta är mer för nöjes skull. Orden kan vara slumpmässig när data saknas. Du kan läsa mer om hur jag har gått till väga <a href="https://blog.nimishg.com/word2vec-on-swedish-parliament-speeches/">här</a> (på engelska). Skriva till mig på nimish@data<span class='prevspam'>forspam</span>st<span class='noissue'>rate</span>gy.se med förslag eller frågor.</em></p>
+
+    </div> 
+  </div>
+
+
+</body>
+<footer>
+  <hr>
+  <div id="footercredits"></div>
+  <div id="footermore">
+    <span class="context_explain">Vad menas med 'kontext'?</span> <a href="https://blog.nimishg.com/word2vec-on-swedish-parliament-speeches/">Annü mer info.</a> För frågor eller förslag, maila nimish@data<span class="prevspam">nospam</span>st<span class='noissue'>rate</span>gy.se
+  </div>
+</footer>
+</html>
