@@ -34,5 +34,5 @@ for party in parties_list:
     print("Now on party:" + party)
     path = os.path.join(home_dir, party)
     sentences = MySentences(path) # a memory-friendly iterator
-    model = gensim.models.Word2Vec(sentences, size=500, window=5, min_count=5, workers=4)
+    model = gensim.models.Word2Vec(sentences, size=500, window=5, min_count=5, workers=4, iter=50)
     model.save(model_dir + party + ".model")
